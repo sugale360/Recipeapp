@@ -1,0 +1,33 @@
+@model List<Recipe>
+@{
+    ViewData["Title"] = "PizzaIngredients";
+}
+<div class="Container p-3">
+    <div class="row pt-4">
+        <h2 class="row pt-4">Pizza Ingredients</h2>
+
+    </div>
+</div>
+<br />
+<p>
+
+<h5>For the base</h5>
+300g strong bread flour
+1 tsp instant yeast (from a sachet or a tub)
+1 tsp salt
+1 tbsp olive oil, plus extra for drizzling<br><br>
+<h5>For the tomato sauce</h5>
+100ml passata
+handful fresh basil or 1 tsp dried
+1 garlic clove, crushed<br><br>
+<h5>For the topping</h5>
+125g ball mozzarella, sliced
+handful grated or shaved parmesan (or vegetarian alternative)
+handful of cherry tomatoes, halved<br><br>
+<h5>To finish</h5>
+handful of basil leaves (optional)
+</p>
+
+<a asp-controller="Recipes" asp-action="Index" class="btn btn-secondary" style="width:150px">
+    Back to List
+</a>

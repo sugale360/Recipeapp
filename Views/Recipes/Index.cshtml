@@ -1,0 +1,53 @@
+@model List<Recipe>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="Container p-3">
+    <div class="row pt-4">
+        <h2 class="row pt-4">Recipes</h2>
+
+    </div>
+    <div class="col-6 text-end">
+        <a asp-controller="Recipes" asp-action="Add" class="btn btn-primary">
+            Add New Recipe
+        </a>
+    </div>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>Food Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="25%">@obj.Name</td>
+                <td width="25%">@obj.Price</td>
+                <td></td>
+                <td>
+
+                    <div class="w-75 btn-group" role="group">
+
+
+                        <a href="@obj.RecipePage" class="btn btn-danger mx-2">
+                            Recipe </a>
+                        <a asp-controller="Recipes" asp-action="IngredientPage" asp-route-id="@obj.Id"
+                        class="btn btn-primary mx-2">
+                            Ingredients </a>
+                        <a asp-controller="Recipes" asp-action="Update" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                            Edit </a>
+                        <a asp-controller="Recipes" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                            Delete </a>
+
+                    </div>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

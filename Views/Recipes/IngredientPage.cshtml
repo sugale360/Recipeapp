@@ -1,0 +1,118 @@
+@model IEnumerable<recipes.Models.Ingredient>
+    @{
+        ViewBag.Title="Ingredient";
+    }
+    <h2>Ingredients</h2>
+    @* <p>@Html.ActionLink</p> *@
+    <table class="Table table-bordered table-striped" style="width: 100%;">
+        <tr style="text-align: center;">
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient1)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient2)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient3)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient4)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient5)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient6)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient7)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient8)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient9)</th>
+            <th>@Html.DisplayNameFor(model => model.Ingredient10)</th>
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr style="text-align: center;">
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient1)</td>
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient2)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient3)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient4)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient5)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient6)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient7)</td>
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient8)</td>
+
+v
+
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient9)</td>
+                 <td>@Html.DisplayFor(modelItem => item.Ingredient10)</td>
+
+
+            </tr>
+        }
+    </table>
+
+
+@* @model Ingredient
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="Container p-3">
+    <div class="row pt-4">
+        
+            <h2 class="row pt-4"> Ingredients for @Model.Name </h2>
+
+            <br>
+            <br>
+            <br>
+            <ul>
+                @if (@Model.Ingredient1 != null)
+                {
+                    <li> @Model.Ingredient1</li>
+                }
+                @if (@Model.Ingredient2 != null)
+                {
+                    <li> @Model.Ingredient2</li>
+                }
+                @if (@Model.Ingredient3 != null)
+                {
+                    <li> @Model.Ingredient3</li>
+                }
+                @if (@Model.Ingredient4 != null)
+                {
+                    <li> @Model.Ingredient4</li>
+                }
+                @if (@Model.Ingredient5 != null)
+                {
+                    <li> @Model.Ingredient5</li>
+                }
+                @if (@Model.Ingredient6 != null)
+                {
+                    <li> @Model.Ingredient6</li>
+                }
+                @if (@Model.Ingredient7 != null)
+                {
+                    <li> @Model.Ingredient7</li>
+                }
+                @if (@Model.Ingredient8 != null)
+                {
+                    <li> @Model.Ingredient8</li>
+                }
+                @if (@Model.Ingredient9 != null)
+                {
+                    <li> @Model.Ingredient9</li>
+                }
+                @if (@Model.Ingredient10 != null)
+                {
+                    <li> @Model.Ingredient10</li>
+                }
+
+            </ul>
+        
+
+    </div>
+</div>
+<br />
+
+
+
+<a asp-controller="Recipes" asp-action="Index" class="btn btn-secondary" style="width:150px">
+    Back to List
+</a> *@
